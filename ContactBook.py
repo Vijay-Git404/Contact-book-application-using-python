@@ -1,4 +1,5 @@
-def display_menu():
+contact_book={} #first we create the dictionary
+def display_menu():                    # Create function to display options
     print("Contact Book Menu:")
     print("1. Add Contact")
     print("2. View Contact")
@@ -6,7 +7,7 @@ def display_menu():
     print("4. Delete Contact")
     print("5. List All Contacts")
     print("6. Exit")
-def add_contact(contact_book):
+def add_contact(contact_book):    # Create functions for all options
     name = input("Enter name:").strip()
     phone = input("Enter phone:")
     email = input("Enter email:")
@@ -51,8 +52,7 @@ def delete_contact(contact_book):
         print("Contact deleted successfully!")
     else:
         print("Contact not found!")
-contact_book={}
-while True:
+while True:                    #use while loop to execute the program.
     display_menu()
     choice = int(input("Enter Choice: "))
 
