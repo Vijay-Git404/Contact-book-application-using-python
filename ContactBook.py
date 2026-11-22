@@ -52,6 +52,16 @@ def delete_contact(contact_book):
         print("Contact deleted successfully!")
     else:
         print("Contact not found!")
+def list_all_contacts(contact_book):
+    if not contact_book:
+        print("No contact saved!!")
+    else:
+        for name,details in contact_book.items():
+            print("Name:", name)
+            print("Phone:", details["phone"])
+            print("Email:", details["email"])
+            print("Address:", details["address"])
+            print(" ")
 while True:                    #use while loop to execute the program.
     display_menu()
     choice = int(input("Enter Choice: "))
@@ -68,7 +78,7 @@ while True:                    #use while loop to execute the program.
     elif choice == 4:
        delete_contact(contact_book)
     elif choice == 5:
-        print(contact_book)
+        list_all_contacts(contact_book)
 
     elif choice == 6:
         print("Exiting Contact Book. Goodbye!")
